@@ -52,7 +52,7 @@ app.get('/api/shorturl/:shortUrl', function (req, res) {
 
     // 2.如果原始URL不存在，返回错误信息
     if (!originalUrl) {
-        return res.json({ error: 'invalid url' });
+        return res.json({ error: 'No short URL found' });
     }
 
     // 3.重定向到原始URL
